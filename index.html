@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Tools Directory</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>AI Tools Directory</h1>
+        <p>Discover the best AI tools and websites for your needs</p>
+      </div>
+    </header>
+
+    <section class="search-section">
+      <div class="container">
+        <div class="search-container">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search for AI tools..."
+          />
+          <button id="searchButton"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div class="filter-container">
+          <div class="filter-group">
+            <label>Category:</label>
+            <select id="categoryFilter">
+              <option value="all">All Categories</option>
+              <option value="image">Image Generation</option>
+              <option value="video">Video Generation</option>
+              <option value="text">Text Generation</option>
+              <option value="code">Code Generation</option>
+            </select>
+          </div>
+
+          <button id="resetFilters">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories-section">
+      <div class="container">
+        <h2>Categories</h2>
+        <div class="category-buttons">
+          <button class="category-btn active" data-category="all">All</button>
+          <button class="category-btn" data-category="image">
+            Image Generation
+          </button>
+          <button class="category-btn" data-category="video">
+            Video Generation
+          </button>
+          <button class="category-btn" data-category="text">
+            Text Generation
+          </button>
+          <button class="category-btn" data-category="code">
+            Code Generation
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <div class="container">
+        <h2 id="currentCategory">All AI Tools</h2>
+        <div id="toolsContainer" class="tools-container">
+          <!-- AI tools will be dynamically inserted here -->
+        </div>
+      </div>
+    </section>
+
+    <section class="add-tool-section">
+      <div class="container">
+        <h2>Add New AI Tool</h2>
+        <div class="add-tool-form">
+          <div class="form-group">
+            <label for="toolName">Tool Name:</label>
+            <input
+              type="text"
+              id="toolName"
+              placeholder="Enter tool name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="toolDescription">Description:</label>
+            <textarea
+              id="toolDescription"
+              placeholder="Enter tool description"
+              required
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="toolCategory">Category:</label>
+            <select id="toolCategory" required>
+              <option value="image">Image Generation</option>
+              <option value="video">Video Generation</option>
+              <option value="text">Text Generation</option>
+              <option value="code">Code Generation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="toolLink">Website URL:</label>
+            <input
+              type="url"
+              id="toolLink"
+              placeholder="https://example.com"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="toolTags">Tags (comma separated):</label>
+            <input
+              type="text"
+              id="toolTags"
+              placeholder="e.g., AI, Productivity, Writing"
+            />
+          </div>
+          <button id="addToolButton" class="add-tool-btn">Add Tool</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About AI Tools Directory</h3>
+            <p>
+              Your comprehensive resource for discovering and comparing the
+              latest AI tools and technologies.
+            </p>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Categories</a></li>
+              <li><a href="#">Submit a Tool</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">GDPR Compliance</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 AI Tools Directory. All rights reserved.</p>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
